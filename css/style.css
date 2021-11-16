@@ -93,6 +93,7 @@ header {
   justify-content: center;
   flex-flow: column;
   text-align: center;
+  padding: 0.5rem;
 }
 
 header img {
@@ -100,7 +101,7 @@ header img {
   width: 17rem;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 1rem;
+
   border: 0.7rem solid var(--yellow);
   background: #fff;
 }
@@ -219,7 +220,7 @@ header .navbar ul li a:hover {
   margin: 2rem;
 }
 .about .row .counter .box span {
-  font-size: 1.7rem;
+  font-size: 4rem;
   color: var(--yellow);
 }
 
@@ -227,7 +228,136 @@ header .navbar ul li a:hover {
   font-size: 2rem;
   color: #fff;
 }
+.skill .box-container {
+  display: block;
+  align-items: center;
+  justify-content: space-between;
 
+  padding: 3rem 0;
+  padding-left: 3rem;
+}
+
+.skill .box-container .bar {
+  margin: 35px 0;
+}
+.bar .info {
+  margin-bottom: 5px;
+}
+.skill .box-container .bar .info span {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--yellow);
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+.skill .box-container .progress-line {
+  position: relative;
+  height: 10px;
+  width: 100%;
+  background: #333;
+  border-radius: 10px;
+  transform-origin: left;
+  transform: scaleX(0);
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05);
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+.skill .box-container .progress-line span {
+  height: 100%;
+  width: 80%;
+  background: #6665ee;
+  position: absolute;
+  border-radius: 10px;
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.skill .box-container .progress-line.html span {
+  width: 80%;
+}
+.skill .box-container .progress-line.css span {
+  width: 60%;
+}
+.skill .box-container .progress-line.php span {
+  width: 70%;
+}
+.skill .box-container .progress-line.python span {
+  width: 50%;
+}
+.skill .box-container .progress-line.django span {
+  width: 75%;
+}
+
+.skill .box-container .progress-line.corel span {
+  width: 85%;
+}
+
+.skill .box-container .bar .progress-line span::before {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: -10px;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #333;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+
+.skill .box-container .bar .progress-line span::after {
+  position: absolute;
+
+  right: 0;
+  top: -26px;
+  color: #eee;
+  font-size: 12px;
+  font-weight: 500;
+  background: #333;
+  padding: 1px 8px;
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+
+@keyframes showText2 {
+  100% {
+    opacity: 1;
+  }
+}
+
+.skill .box-container .progress-line.html span::after {
+  content: "80%";
+}
+.skill .box-container .progress-line.css span::after {
+  content: "60%";
+}
+.skill .box-container .progress-line.php span::after {
+  content: "70%";
+}
+.skill .box-container .progress-line.python span::after {
+  content: "50%";
+}
+.skill .box-container .progress-line.django span::after {
+  content: "75%";
+}
+
+.skill .box-container .progress-line.corel span::after {
+  content: "85%";
+}
 .education .box-container {
   display: flex;
   align-items: center;
