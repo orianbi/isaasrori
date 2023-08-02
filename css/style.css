@@ -289,13 +289,19 @@ header .navbar ul li a:hover {
 .skill .box-container .progress-line.css span {
   width: 60%;
 }
-.skill .box-container .progress-line.php span {
+.skill .box-container .progress-line.javascript span {
+  width: 60%;
+}
+.skill .box-container .progress-line.network span {
   width: 70%;
 }
-.skill .box-container .progress-line.python span {
-  width: 50%;
+.skill .box-container .progress-line.php span {
+  width: 80%;
 }
-.skill .box-container .progress-line.django span {
+/* .skill .box-container .progress-line.python span {
+  width: 50%;
+} */
+.skill .box-container .progress-line.laravel span {
   width: 75%;
 }
 
@@ -345,13 +351,19 @@ header .navbar ul li a:hover {
 .skill .box-container .progress-line.css span::after {
   content: "60%";
 }
-.skill .box-container .progress-line.php span::after {
+.skill .box-container .progress-line.javascript span::after {
+  content: "60%";
+}
+.skill .box-container .progress-line.network span::after {
   content: "70%";
 }
-.skill .box-container .progress-line.python span::after {
-  content: "50%";
+.skill .box-container .progress-line.php span::after {
+  content: "80%";
 }
-.skill .box-container .progress-line.django span::after {
+/* .skill .box-container .progress-line.python span::after {
+  content: "50%";
+} */
+.skill .box-container .progress-line.laravel span::after {
   content: "75%";
 }
 
